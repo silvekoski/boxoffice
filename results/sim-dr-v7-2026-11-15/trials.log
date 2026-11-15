@@ -1,0 +1,12 @@
+i0 policy: {'type': 'metadata', 'version': 1, 'name': 'junction-sorter', 'action_horizon': 10}  sim: {'dr': {'name': 'train', 'path': '/root/work/upstream/aaltonomous/sim/dr/train.yaml'}, 'ports': {'scen
+i0 trial   0 seed 1000: 2/3 correct  score +2/3  end=done  t=132.557s  clips=0  hz=30.0  rt_hz=69.43  rtf=0.247  gate=ok
+i0 trial   1 seed 1001: 2/5 correct  score +2/5  end=done  t=475.061s  clips=0  hz=30.0  rt_hz=67.7  rtf=0.252  gate=ok
+i0 trial   2 seed 1002: 2/4 correct  score +2/4  end=done  t=468.164s  clips=0  hz=30.0  rt_hz=71.34  rtf=0.252  gate=ok
+i0 trial   3 seed 1003: 3/3 correct  score +3/3  end=done  t=165.591s  clips=0  hz=30.0  rt_hz=68.88  rtf=0.252  gate=ok
+i0 trial   4 seed 1004: 1/5 correct  score +1/5  end=done  t=471.573s  clips=0  hz=30.0  rt_hz=70.94  rtf=0.249  gate=ok
+i1 policy: {'type': 'metadata', 'version': 1, 'name': 'junction-sorter', 'action_horizon': 10}  sim: {'dr': {'name': 'train', 'path': '/root/work/upstream/aaltonomous/sim/dr/train.yaml'}, 'ports': {'scen
+i1 trial   0 seed 1000: 2/3 correct  score +4/6  end=done  t=223.559s  clips=0  hz=30.0  rt_hz=70.05  rtf=0.248  gate=ok
+i1 trial   1 seed 1001: 1/3 correct  score +2/6  end=done  t=373.604s  clips=0  hz=30.0  rt_hz=70.35  rtf=0.251  gate=ok
+i1 trial   2 seed 1002: 1/5 correct  score +2/10  end=done  t=465.952s  clips=0  hz=30.0  rt_hz=70.32  rtf=0.249  gate=ok
+i1 trial   3 seed 1003: 2/4 correct  score +4/8  end=done  t=421.119s  clips=0  hz=30.0  rt_hz=70.78  rtf=0.247  gate=ok
+i1 trial   4 seed 1004: 1/3 correct  score +2/6  end=done  t=402.754s  clips=0  hz=30.0  rt_hz=68.51  rtf=0.245  gate=ok

@@ -1,0 +1,32 @@
+input loudness: I=-19.08 LUFS, TP=-3.07 dBTP, LRA=2.20 LU
+codec_name=h264
+profile=High
+width=1920
+height=1080
+pix_fmt=yuv420p
+r_frame_rate=30/1
+bit_rate=262842
+codec_name=aac
+profile=LC
+sample_rate=48000
+channels=2
+r_frame_rate=0/0
+bit_rate=154920
+duration=91.600000
+size=4882369
+bit_rate=426407
+TAG:major_brand=isom
+[Parsed_ebur128_0 @ 0x5a7945d9f740] Summary:
+
+  Integrated loudness:
+    I:         -14.0 LUFS
+    Threshold: -24.4 LUFS
+
+  Loudness range:
+    LRA:         2.4 LU
+    Threshold: -34.5 LUFS
+    LRA low:   -15.7 LUFS
+    LRA high:  -13.3 LUFS
+
+  True peak:
+    Peak:       -1.4 dBFS

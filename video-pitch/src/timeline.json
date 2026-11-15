@@ -1,0 +1,42 @@
+[
+ {
+  "id": "s00",
+  "from": 0,
+  "frames": 75,
+  "vo": 0,
+  "voAt": 9,
+  "voExt": "mp3"
+ },
+ {
+  "id": "s01",
+  "from": 75,
+  "frames": 333,
+  "vo": 0,
+  "voAt": 9,
+  "voExt": "mp3"
+ },
+ {
+  "id": "s02",
+  "from": 408,
+  "frames": 273,
+  "vo": 0,
+  "voAt": 9,
+  "voExt": "mp3"
+ },
+ {
+  "id": "s03",
+  "from": 681,
+  "frames": 273,
+  "vo": 0,
+  "voAt": 9,
+  "voExt": "mp3"
+ },
+ {
+  "id": "s04",
+  "from": 954,
+  "frames": 153,
+  "vo": 0,
+  "voAt": 9,
+  "voExt": "mp3"
+ }
+]

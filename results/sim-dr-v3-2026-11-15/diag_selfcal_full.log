@@ -1,0 +1,25 @@
+02:13:37.695374 WARNING  [G1_29_ArmController] Waiting to         dds_utils.py:9
+                         subscribe dds...                                       
+02:13:38.230430 INFO      📷 Camera 'head_camera'          init ok  client.py:84
+                         (host=127.0.0.1, zmq_port=56160,                       
+                         request_bgr=True)                                      
+02:13:38.233667 INFO      📷 Camera 'left_wrist_camera'    init ok  client.py:84
+                         (host=127.0.0.1, zmq_port=56161,                       
+                         request_bgr=True)                                      
+02:13:38.239711 INFO      📷 Camera 'right_wrist_camera'   init ok  client.py:84
+                         (host=127.0.0.1, zmq_port=56162,                       
+                         request_bgr=True)                                      
+[DDSBackend] pacing on the sim clock (tcp://127.0.0.1:56176, sim t 12.00 s)
+seed 1000: 3/3 found, fp 0, rcub 12mm, ycyl 15mm, bcyl 4mm
+seed 1001: 5/5 found, fp 0, rcub 4mm, rcub 8mm, bcub 18mm, ycyl 4mm, bcyl 13mm
+seed 1002: 4/4 found, fp 0, bcub 9mm, rcyl 13mm, ycyl 5mm, bcyl 21mm
+seed 1003: 3/3 found, fp 0, rcub 4mm, bcub 4mm, ycyl 13mm
+seed 1004: 0/5 found, fp 7, rcub nanmm, rcyl nanmm, ycyl nanmm, ycyl nanmm, btri nanmm
+seed 1005: 4/4 found, fp 0, rcyl 12mm, ycyl 4mm, bcyl 16mm, bcyl 5mm
+seed 1006: 4/4 found, fp 0, rcub 6mm, bcyl 4mm, rtri 5mm, ytri 4mm
+seed 1007: 3/3 found, fp 0, bcyl 9mm, rtri 8mm, ytri 4mm
+seed 1008: 4/4 found, fp 0, ycyl 4mm, rtri 14mm, ytri 23mm, btri 5mm
+seed 1009: 5/5 found, fp 0, bcub 6mm, bcub 29mm, ycyl 4mm, rtri 23mm, ytri 12mm
+seed 1010: 5/5 found, fp 0, bcub 4mm, rcyl 4mm, ytri 5mm, ytri 4mm, btri 5mm
+seed 1011: 3/3 found, fp 0, rcub 20mm, bcub 6mm, ycyl 4mm
+DIAG3_EXIT 143

@@ -1,0 +1,57 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; }
+    #s06-base { left: 160px; top: 640px; width: 1000px; height: 2px; background: #46505F; }
+    .s06-bar { position: absolute; width: 150px; border-radius: 8px 8px 0 0; }
+    .s06-val { position: absolute; width: 150px; text-align: center; font-family: var(--mono); font-size: 44px; font-weight: 600; }
+    .s06-grp { position: absolute; top: 660px; width: 360px; text-align: center; font-size: 34px; }
+    .s06-key { position: absolute; font-size: 28px; color: var(--grey); }
+    #s06-chips { left: 1240px; top: 220px; display: flex; flex-direction: column; gap: 26px; align-items: flex-start; }
+  </style>
+  <div id="root" data-composition-id="s06" data-width="1920" data-height="1080">
+    <div class="stage" id="s06-stage">
+      <div class="chapter"><b>Results</b> · Aalto simulator, randomised scenes, same seeds</div>
+      <div class="abs" id="s06-base"></div>
+      <div class="s06-key" style="left:160px; top:160px"><span style="color:#8A93A3">■</span> first version &nbsp; <span style="color:#3FBF8F">■</span> Box Office</div>
+      <div class="abs" id="s06-chips">
+        <div class="chip green" id="s06-c1"><span class="mono">0</span> wrong boxes</div>
+        <div class="chip green" id="s06-c2"><span class="mono">0</span> safety clips</div>
+        <div class="chip green" id="s06-c3">first move <span class="mono">52 s → 1 s</span></div>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const V = window.VID, S = "s06";
+      const tl = gsap.timeline({ paused: true });
+      V.sceneEnvelope(tl, "#s06-stage", S);
+      const stage = document.querySelector("#s06-stage");
+      // objects correct: fixed 8/20 -> 10/20, instruction 12/18 -> 10/18 (results/sim-dr-v9-2026-11-15/README.md)
+      const groups = [
+        { name: "fixed sorting", left: 200, vals: [[8, 20], [10, 20]], at: "Fixed sorting" },
+        { name: "by instruction", left: 680, vals: [[12, 18], [10, 18]], at: "By instruction" },
+      ];
+      gsap.set(["#s06-c1", "#s06-c2", "#s06-c3"], { opacity: 0 });
+      groups.forEach((g) => {
+        const lab = V.el("div", "s06-grp", stage, g.name);
+        lab.style.left = g.left - 20 + "px";
+        const t = V.t(S, g.at);
+        V.enter(tl, lab, t);
+        g.vals.forEach((v, i) => {
+          const h = Math.round((v[0] / v[1]) * 420);
+          const bar = V.el("div", "s06-bar", stage), val = V.el("div", "s06-val", stage, v[0] + "/" + v[1]);
+          const x = g.left + i * 170;
+          bar.style.left = x + "px"; bar.style.top = 640 - h + "px"; bar.style.height = h + "px";
+          bar.style.background = i === 0 ? "#5A6475" : "#3FBF8F";
+          val.style.left = x + "px"; val.style.top = 640 - h - 60 + "px"; val.style.color = i === 0 ? "#C2C9D4" : "#3FBF8F";
+          tl.fromTo(bar, { scaleY: 0, transformOrigin: "50% 100%" }, { scaleY: 1, duration: 0.7, ease: "power2.out" }, t + 0.2 + i * 0.5);
+          tl.fromTo(val, { opacity: 0 }, { opacity: 1, duration: 0.3 }, t + 0.5 + i * 0.5);
+        });
+      });
+      V.enter(tl, "#s06-c1", V.t(S, "wrong box"));
+      V.enter(tl, "#s06-c2", V.t(S, "never clipped"));
+      V.enter(tl, "#s06-c3", V.t(S, "about one second"));
+      window.__timelines[S] = tl;
+    })();
+  </script>
+</template>

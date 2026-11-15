@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+<defs><filter id="g" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7" result="n"/>
+<feColorMatrix in="n" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.06 0"/><feComposite in2="SourceGraphic" operator="in"/></filter></defs>
+<rect width="1920" height="1080" fill="#2B43A6"/><rect width="1920" height="1080" fill="#fff" filter="url(#g)"/>
+<g transform="translate(330 260) scale(1.15) translate(-30 -320)">
+  <defs><clipPath id="bf330260"><path d="M92 470 L392 470 L372 700 L112 700 Z"/></clipPath></defs>
+  <path d="M120 470 L170 395 L314 395 L364 470 Z" fill="#5B72D6"/><path d="M92 470 L40 410 L120 395 L170 470 Z" fill="#8EA2EE"/>
+  <path d="M392 470 L444 410 L364 395 L314 470 Z" fill="#8EA2EE"/>
+  <g clip-path="url(#bf330260)" fill="#B8C5F6"><rect x="80" y="470" width="330" height="20"/><rect x="80" y="506" width="330" height="20"/><rect x="80" y="542" width="330" height="20"/><rect x="80" y="578" width="330" height="20"/><rect x="80" y="614" width="330" height="20"/><rect x="80" y="650" width="330" height="20"/><rect x="80" y="686" width="330" height="14"/></g>
+  <rect x="216" y="330" width="52" height="52" rx="4" fill="#E9604D" transform="rotate(-12 242 356)"/>
+  <path d="M556 420 A110 110 0 1 0 684 420" fill="none" stroke="#FFFFFF" stroke-width="40" stroke-linecap="round"/>
+  <rect x="600" y="360" width="40" height="150" rx="20" fill="#FFFFFF"/>
+  <path d="M960 380 L1080 440 L960 500 L840 440 Z" fill="#E4EAFD"/><path d="M840 440 L960 500 L960 650 L840 590 Z" fill="#B8C5F6"/>
+  <path d="M1080 440 L960 500 L960 650 L1080 590 Z" fill="#8EA2EE"/><path d="M870 470 L900 485 L900 560 L870 545 Z" fill="#FFFFFF" opacity="0.85"/>
+  <circle cx="1010" cy="430" r="9" fill="#FFFFFF"/><ellipse cx="960" cy="668" rx="150" ry="20" fill="#5B72D6" opacity="0.8"/>
+  <path d="M1102 560 C1102 560 1086 586 1086 598 A16 16 0 0 0 1118 598 C1118 586 1102 560 1102 560 Z" fill="#E4EAFD"/>
+</g><text x="960" y="175" font-family="Inter, Helvetica Neue, DejaVu Sans, Arial, sans-serif" font-size="96" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="-3">‘Box - Off - Ice’</text><text x="960" y="830" font-family="Inter, Helvetica Neue, DejaVu Sans, Arial, sans-serif" font-size="120" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="-4">Box Office</text><text x="960" y="905" font-family="Inter, Helvetica Neue, DejaVu Sans, Arial, sans-serif" font-size="40" font-weight="400" fill="#E4EAFD" text-anchor="middle" letter-spacing="0">A brain for Aalto’s G1 humanoid: plain words in, sorted boxes out.</text><text x="960" y="1010" font-family="JetBrains Mono, DejaVu Sans Mono, monospace" font-size="26" font-weight="400" fill="#B8C5F6" text-anchor="middle" letter-spacing="4">JUNCTION 2026 · AALTONOMOUS HUMANOID · AALTO UNIVERSITY</text></svg>

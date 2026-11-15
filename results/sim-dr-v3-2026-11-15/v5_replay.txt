@@ -1,0 +1,1 @@
+{'calls': 100, 'ticks': 611, 'command_hz': 631.8, 'min_hz': 27.0, 'latency_ms_p50': 9.48, 'latency_ms_max': 16.08, 'errors': [], 'n_errors': 0, 'pass': True, 'connect_s': 0.0}

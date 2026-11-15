@@ -1,0 +1,6 @@
+i0 trial   0 seed 1000: 2/3 correct  score +2/3  end=done  t=154.586s  clips=0  hz=30.0  rt_hz=70.18  rtf=0.25  gate=ok
+i0 trial   1 seed 1001: 0/5 correct  score +0/5  end=time_limit  t=484.269s  clips=0  hz=30.0  rt_hz=71.48  rtf=0.248  gate=ok
+i0 trial   2 seed 1002: 0/4 correct  score +0/4  end=done  t=329.912s  clips=0  hz=30.0  rt_hz=70.37  rtf=0.25  gate=ok
+i1 trial   0 seed 1000: 2/3 correct  score +4/6  end=done  t=150.443s  clips=0  hz=29.99  rt_hz=69.8  rtf=0.25  gate=ok
+i1 trial   1 seed 1001: 0/3 correct  score +0/6  end=done  t=431.023s  clips=0  hz=30.0  rt_hz=68.12  rtf=0.248  gate=ok
+i1 trial   2 seed 1002: 2/5 correct  score +4/10  end=done  t=338.782s  clips=0  hz=30.0  rt_hz=69.65  rtf=0.247  gate=ok

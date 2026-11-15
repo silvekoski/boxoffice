@@ -1,0 +1,131 @@
+[
+ {
+  "id": "s00",
+  "seconds": 2.5,
+  "enter": "logo",
+  "enterVolume": 0.5
+ },
+ {
+  "id": "s01",
+  "text": "Aalto's humanoid robot, Väiski, can do a backflip. Ask it to put three blocks into three boxes, and it is lost.",
+  "sfx": [
+   {
+    "word": "lost",
+    "sound": "hit",
+    "volume": 0.3
+   }
+  ]
+ },
+ {
+  "id": "s02",
+  "text": "So we gave it a brain. Box. Off. Ice. Box Office.",
+  "sfx": [
+   {
+    "word": "Box",
+    "sound": "pop"
+   },
+   {
+    "word": "Off",
+    "sound": "pop"
+   },
+   {
+    "word": "Ice",
+    "sound": "pop"
+   }
+  ]
+ },
+ {
+  "id": "s03",
+  "text": "Three to five objects lie on the counter. Three boxes, two minutes. A right box earns points. A wrong box costs one. So when it is unsure, it skips.",
+  "sfx": [
+   {
+    "word": "right",
+    "sound": "ping",
+    "volume": 0.25
+   }
+  ]
+ },
+ {
+  "id": "s04",
+  "text": "You tell it where things go, in your own words. The blue ones in between. The first box from the left. No templates.",
+  "sfx": [
+   {
+    "word": "between",
+    "sound": "pop"
+   },
+   {
+    "word": "left",
+    "sound": "pop"
+   }
+  ]
+ },
+ {
+  "id": "s09",
+  "text": "Under the hood, the head camera finds each object and its shape. A parser turns the sentence into a box for each object. Aalto's own planner moves the arm, and every move is checked against the safety filter before it runs.",
+  "sfx": [
+   {
+    "word": "camera",
+    "sound": "pop"
+   },
+   {
+    "word": "parser",
+    "sound": "pop"
+   },
+   {
+    "word": "planner",
+    "sound": "pop"
+   }
+  ]
+ },
+ {
+  "id": "s05",
+  "text": "Aalto's real recordings showed us the trap. Standard colour rules saw the orange boxes and the robot's own hands as objects. Box Office finds the real ones, and levels a camera that was tilted by fourteen degrees.",
+  "sfx": [
+   {
+    "word": "trap",
+    "sound": "hit",
+    "volume": 0.25
+   }
+  ]
+ },
+ {
+  "id": "s06",
+  "text": "In Aalto's simulator, on randomised scenes, it sorted ten of twenty objects on the fixed task, up from eight, and ten of eighteen by instruction. Not one object went into a wrong box. The safety filter never clipped a command.",
+  "sfx": [
+   {
+    "word": "Not",
+    "sound": "ping",
+    "volume": 0.25
+   }
+  ]
+ },
+ {
+  "id": "s07",
+  "text": "And on the real recordings, it starts moving after one second, not fifty-two.",
+  "sfx": [
+   {
+    "word": "one",
+    "sound": "ping",
+    "volume": 0.25
+   }
+  ]
+ },
+ {
+  "id": "s10",
+  "text": "The hardest part was not the brain. It was the fingers. A few millimetres of camera error, and a round object slips away. That is what we fix next.",
+  "sfx": [
+   {
+    "word": "fingers",
+    "sound": "hit",
+    "volume": 0.25
+   }
+  ]
+ },
+ {
+  "id": "s08",
+  "text": "Box Office. Plain words in, sorted boxes out. Built at Junction twenty twenty-six.",
+  "hold": 60,
+  "enter": "swell",
+  "enterVolume": 0.3
+ }
+]

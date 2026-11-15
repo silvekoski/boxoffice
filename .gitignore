@@ -1,0 +1,7 @@
+# pinned clone of the organisers' repo: bash scripts/fetch_upstream.sh
+upstream/
+.venv/
+runs/
+__pycache__/
+*.pyc
+.pytest_cache/

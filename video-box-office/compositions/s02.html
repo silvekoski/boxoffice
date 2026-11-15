@@ -1,0 +1,39 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; }
+    #s02-card { left: 96px; top: 150px; width: 960px; height: 720px; }
+    #s02-card img { left: 0; top: 0; width: 960px; height: 720px; mix-blend-mode: normal; }
+    #s02-tag { left: 112px; top: 166px; }
+    #s02-col { left: 1130px; top: 170px; width: 700px; display: flex; flex-direction: column; gap: 22px; align-items: flex-start; }
+  </style>
+  <div id="root" data-composition-id="s02" data-width="1920" data-height="1080">
+    <div class="stage" id="s02-stage">
+      <div class="chapter"><b>The task</b> · Aalto's simulator, head camera</div>
+      <div class="paper" id="s02-card"><img src="assets/data/sim_head.jpg" alt=""></div>
+      <div class="abs chip blue" id="s02-tag">head camera</div>
+      <div class="abs" id="s02-col">
+        <div class="chip grey" id="s02-a"><span class="mono">3–5</span> objects</div>
+        <div class="chip grey" id="s02-b"><span class="mono">3</span> boxes</div>
+        <div class="chip grey" id="s02-c"><span class="mono">120 s</span></div>
+        <div class="chip green" id="s02-d">+ right box</div>
+        <div class="chip red" id="s02-e">− wrong box</div>
+        <div class="chip grey" id="s02-f"><span class="mono">0</span> skipped</div>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const V = window.VID, S = "s02";
+      const tl = gsap.timeline({ paused: true });
+      V.sceneEnvelope(tl, "#s02-stage", S);
+      V.enter(tl, ["#s02-card", "#s02-tag"], 0.2);
+      V.enter(tl, "#s02-a", V.t(S, "Three to five"));
+      V.enter(tl, "#s02-b", V.t(S, "Three boxes"));
+      V.enter(tl, "#s02-c", V.t(S, "two minutes"));
+      V.enter(tl, "#s02-d", V.t(S, "A right box"));
+      V.enter(tl, "#s02-e", V.t(S, "A wrong box"));
+      V.enter(tl, "#s02-f", V.t(S, "it skips"));
+      window.__timelines[S] = tl;
+    })();
+  </script>
+</template>

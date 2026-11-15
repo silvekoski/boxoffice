@@ -1,0 +1,42 @@
+/* Shared look of every scene. Colours carry one meaning each:
+   blue = the question, amber = evidence on the drawing, green = a verified answer,
+   red = an error, a trap or "I do not know", grey = context text. */
+@font-face { font-family: "VID Inter"; font-weight: 400; font-style: normal; src: url("fonts/inter-latin-400-normal.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "VID Inter"; font-weight: 600; font-style: normal; src: url("fonts/inter-latin-600-normal.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "VID Inter"; font-weight: 400; font-style: normal; src: url("fonts/inter-latin-ext-400-normal.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "VID Inter"; font-weight: 600; font-style: normal; src: url("fonts/inter-latin-ext-600-normal.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "VID Mono"; font-weight: 400; font-style: normal; src: url("fonts/jetbrains-mono-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "VID Mono"; font-weight: 600; font-style: normal; src: url("fonts/jetbrains-mono-latin-600-normal.woff2") format("woff2"); }
+
+:root {
+  --bg: #0E1116; --panel: #161B23; --panel-2: #1D2430; --line: #2A3342;
+  --paper: #F4F1EA; --ink: #E8ECF2;
+  --blue: #4C9BE8; --amber: #F0A63A; --green: #3FBF8F; --red: #E5604D; --grey: #8A93A3;
+  --sans: "VID Inter", sans-serif; --mono: "VID Mono", monospace;
+}
+.stage { position: absolute; inset: 0; font-family: var(--sans); color: var(--ink); font-size: 40px; line-height: 1.2; }
+.stage * { box-sizing: border-box; }
+.abs { position: absolute; }
+.mono { font-family: var(--mono); }
+.t-title { font-size: 72px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.08; }
+.t-body { font-size: 40px; font-weight: 400; }
+.t-label { font-size: 28px; font-weight: 400; color: var(--grey); }
+.c-blue { color: var(--blue); } .c-amber { color: var(--amber); } .c-green { color: var(--green); }
+.c-red { color: var(--red); } .c-grey { color: var(--grey); }
+.chapter { position: absolute; left: 96px; top: 52px; font-family: var(--mono); font-size: 28px; color: var(--grey); letter-spacing: 0.02em; }
+.chapter b { color: var(--ink); font-weight: 600; }
+
+/* A real drawing lies on a paper card. */
+.paper { position: absolute; background: var(--paper); border-radius: 6px; box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55), 0 2px 6px rgba(0, 0, 0, 0.4); overflow: hidden; }
+.paper img { position: absolute; display: block; mix-blend-mode: multiply; }
+.paper svg { position: absolute; overflow: visible; }
+
+/* Chips: short facts. The border colour carries the meaning. */
+.chip { display: inline-flex; align-items: center; gap: 14px; padding: 12px 22px; border-radius: 12px; border: 2px solid var(--line); background: var(--panel); font-size: 32px; line-height: 1.22; color: var(--ink); }
+.chip.blue { border-color: var(--blue); color: #CFE4FA; background: rgba(76, 155, 232, 0.10); }
+.chip.amber { border-color: var(--amber); color: #FBE3BD; background: rgba(240, 166, 58, 0.10); }
+.chip.green { border-color: var(--green); color: #C9F0E0; background: rgba(63, 191, 143, 0.10); }
+.chip.red { border-color: var(--red); color: #F8CFC8; background: rgba(229, 96, 77, 0.12); }
+.chip.grey { border-color: #46505F; color: var(--ink); }
+.panel { position: absolute; background: var(--panel); border: 1.5px solid var(--line); border-radius: 16px; }
+

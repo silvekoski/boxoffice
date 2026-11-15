@@ -1,0 +1,54 @@
+{
+ "cues": [
+  {
+   "frame": 0,
+   "sound": "logo",
+   "volume": 0.5
+  },
+  {
+   "frame": 75,
+   "sound": "whoosh",
+   "volume": 0.22
+  },
+  {
+   "frame": 408,
+   "sound": "whoosh",
+   "volume": 0.22
+  },
+  {
+   "frame": 465,
+   "sound": "pop",
+   "volume": 0.3
+  },
+  {
+   "frame": 537,
+   "sound": "pop",
+   "volume": 0.3
+  },
+  {
+   "frame": 621,
+   "sound": "pop",
+   "volume": 0.3
+  },
+  {
+   "frame": 681,
+   "sound": "whoosh",
+   "volume": 0.22
+  },
+  {
+   "frame": 798,
+   "sound": "ping",
+   "volume": 0.28
+  },
+  {
+   "frame": 954,
+   "sound": "swell",
+   "volume": 0.3
+  }
+ ],
+ "typing": {
+  "sound": "type",
+  "volume": 0.18
+ },
+ "music": null
+}

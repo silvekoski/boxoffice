@@ -1,0 +1,43 @@
+01:58:06.156725 WARNING  [G1_29_ArmController] Waiting to         dds_utils.py:9
+                         subscribe dds...                                       
+01:58:06.681947 INFO      📷 Camera 'head_camera'          init ok  client.py:84
+                         (host=127.0.0.1, zmq_port=56160,                       
+                         request_bgr=True)                                      
+01:58:06.685391 INFO      📷 Camera 'left_wrist_camera'    init ok  client.py:84
+                         (host=127.0.0.1, zmq_port=56161,                       
+                         request_bgr=True)                                      
+01:58:06.688888 INFO      📷 Camera 'right_wrist_camera'   init ok  client.py:84
+                         (host=127.0.0.1, zmq_port=56162,                       
+                         request_bgr=True)                                      
+[DDSBackend] pacing on the sim clock (tcp://127.0.0.1:56176, sim t 0.30 s)
+seed 1000: 3/3 found, fp 0, rcub 9mm, ycyl 5mm, bcyl 15mm
+seed 1001: 5/5 found, fp 0, rcub 16mm, rcub 13mm, bcub 12mm, ycyl 11mm, bcyl 15mm
+seed 1002: 4/4 found, fp 0, bcub 3mm, rcyl 11mm, ycyl 9mm, bcyl 13mm
+seed 1003: 3/3 found, fp 0, rcub 8mm, bcub 8mm, ycyl 25mm
+seed 1004: 5/5 found, fp 0, rcub 34mm, rcyl 25mm, ycyl 24mm, ycyl 30mm, btri 23mm
+seed 1005: 4/4 found, fp 0, rcyl 7mm, ycyl 13mm, bcyl 14mm, bcyl 11mm
+seed 1006: 4/4 found, fp 0, rcub 4mm, bcyl 2mm, rtri 4mm, ytri 3mm
+seed 1007: 3/3 found, fp 0, bcyl 20mm, rtri 13mm, ytri 13mm
+seed 1008: 4/4 found, fp 0, ycyl 14mm, rtri 16mm, ytri 12mm, btri 17mm
+seed 1009: 5/5 found, fp 0, bcub 5mm, bcub 25mm, ycyl 3mm, rtri 19mm, ytri 11mm
+seed 1010: 5/5 found, fp 0, bcub 18mm, rcyl 19mm, ytri 16mm, ytri 17mm, btri 24mm
+seed 1011: 3/3 found, fp 0, rcub 23mm, bcub 12mm, ycyl 12mm
+seed 1012: 5/5 found, fp 0, rcub 25mm, bcyl 14mm, rtri 13mm, ytri 15mm, btri 15mm
+seed 1013: 3/3 found, fp 0, rcub 12mm, bcyl 23mm, ytri 14mm
+seed 1014: 4/4 found, fp 0, rcub 5mm, ycub 6mm, rcyl 10mm, btri 7mm
+seed 1015: 4/4 found, fp 0, rcub 4mm, ytri 4mm, btri 4mm, btri 4mm
+seed 1016: 4/4 found, fp 0, rcub 1mm, ytri 9mm, btri 11mm, btri 6mm
+seed 1017: 5/5 found, fp 0, ycub 7mm, bcub 12mm, ycyl 5mm, rtri 3mm, rtri 7mm
+seed 1018: 5/5 found, fp 0, rcub 8mm, ycyl 22mm, bcyl 14mm, bcyl 13mm, ytri 18mm
+seed 1019: 4/4 found, fp 0, ycub 18mm, bcub 19mm, rtri 17mm, ytri 21mm
+02:01:00.836312 INFO      📷 Camera 'head_camera'          closed. client.py:174
+02:01:00.836785 INFO      📷 Camera 'left_wrist_camera'    closed. client.py:174
+02:01:00.900619 INFO      📷 Camera 'right_wrist_camera'   closed. client.py:174
+
+shape      found   xy err median / p90 (mm)   err_x mean (mm)   shape ok   colour ok
+cube       25/25      11.6 /   24.5              +1.8         18/25     25/25
+cylinder   28/28      13.2 /   24.5              -0.3         15/28     28/28
+triangle   29/29      13.2 /   19.5              -0.5         24/29     29/29
+cylinder centre, 15 with a fit: stock median 12.6 mm / p90 22.6;  fit median 11.6 mm / p90 23.3
+false positives: 0
+DIAG2_EXIT 0

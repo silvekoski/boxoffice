@@ -1,0 +1,12 @@
+{
+  "url": "Box Office · Junction 2026",
+  "dark": true,
+  "colors": {
+    "bg": "#2B43A6", "panel": "#2F49B0", "panel2": "#3551BD", "line": "#4A63C8", "line2": "#6A80D8",
+    "text": "#FFFFFF", "sub": "#C9D2F2", "dim": "#8EA2EE", "accent": "#B8C5F6",
+    "amber": "#F0A63A", "red": "#E9604D", "good": "#3FBF8F"
+  },
+  "radius": 14,
+  "glow": 0.35,
+  "logo": "box-office-mark.png"
+}

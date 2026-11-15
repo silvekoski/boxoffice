@@ -1,0 +1,45 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; }
+    .s03-row { position: absolute; left: 160px; width: 1600px; height: 110px; }
+    .s03-row .chip { position: absolute; top: 20px; font-size: 40px; }
+    .s03-row svg { position: absolute; left: 860px; top: 30px; }
+    #s03-r1 { top: 260px; } #s03-r2 { top: 470px; }
+    #s03-note { left: 160px; top: 700px; }
+    #s03-title { left: 160px; top: 130px; width: 1600px; }
+  </style>
+  <div id="root" data-composition-id="s03" data-width="1920" data-height="1080">
+    <div class="stage" id="s03-stage">
+      <div class="chapter"><b>Language</b> · instructions it has never seen</div>
+      <div class="abs t-title" id="s03-title">Say it in your own words</div>
+      <div class="s03-row" id="s03-r1">
+        <div class="chip blue" id="s03-q1">“the blue ones in between”</div>
+        <svg width="200" height="60"><path id="s03-p1" d="M0 30 L170 30 M150 12 L172 30 L150 48" fill="none" stroke="#8A93A3" stroke-width="5" stroke-linecap="round"/></svg>
+        <div class="chip green" id="s03-a1" style="left:1100px">blue → <b>centre</b></div>
+      </div>
+      <div class="s03-row" id="s03-r2">
+        <div class="chip blue" id="s03-q2">“the first box from the left”</div>
+        <svg width="200" height="60"><path id="s03-p2" d="M0 30 L170 30 M150 12 L172 30 L150 48" fill="none" stroke="#8A93A3" stroke-width="5" stroke-linecap="round"/></svg>
+        <div class="chip green" id="s03-a2" style="left:1100px">→ <b>left</b> box</div>
+      </div>
+      <div class="abs chip grey" id="s03-note">no templates · one box per object</div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const V = window.VID, S = "s03";
+      const tl = gsap.timeline({ paused: true });
+      V.sceneEnvelope(tl, "#s03-stage", S);
+      gsap.set(["#s03-q1", "#s03-a1", "#s03-q2", "#s03-a2", "#s03-note"], { opacity: 0 });
+      V.enter(tl, "#s03-title", 0.2);
+      V.enter(tl, "#s03-q1", V.t(S, "The blue ones"));
+      V.draw(tl, document.querySelector("#s03-p1"), V.t(S, "in between", 0, "e"), 0.5);
+      V.enter(tl, "#s03-a1", V.t(S, "in between", 0, "e") + 0.4);
+      V.enter(tl, "#s03-q2", V.t(S, "The first box"));
+      V.draw(tl, document.querySelector("#s03-p2"), V.t(S, "from the left", 0, "e"), 0.5);
+      V.enter(tl, "#s03-a2", V.t(S, "from the left", 0, "e") + 0.4);
+      V.enter(tl, "#s03-note", V.t(S, "no templates"));
+      window.__timelines[S] = tl;
+    })();
+  </script>
+</template>

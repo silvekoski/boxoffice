@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="640" height="640">
+  <!-- Box Office mark: the striped open box with a cube dropping in. -->
+  <defs><clipPath id="f"><path d="M150 330 L490 330 L466 560 L174 560 Z"/></clipPath></defs>
+  <rect width="640" height="640" rx="120" fill="#2B43A6"/>
+  <path d="M182 330 L240 248 L400 248 L458 330 Z" fill="#5B72D6"/>
+  <path d="M150 330 L92 262 L182 248 L240 330 Z" fill="#8EA2EE"/>
+  <path d="M490 330 L548 262 L458 248 L400 330 Z" fill="#8EA2EE"/>
+  <g clip-path="url(#f)" fill="#B8C5F6">
+    <rect x="140" y="330" width="360" height="22"/><rect x="140" y="370" width="360" height="22"/>
+    <rect x="140" y="410" width="360" height="22"/><rect x="140" y="450" width="360" height="22"/>
+    <rect x="140" y="490" width="360" height="22"/><rect x="140" y="530" width="360" height="30"/>
+  </g>
+  <rect x="290" y="150" width="62" height="62" rx="5" fill="#E9604D" transform="rotate(-12 321 181)"/>
+</svg>

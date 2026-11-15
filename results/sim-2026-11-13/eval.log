@@ -1,0 +1,68 @@
+sha256:32d7b6b8355a2ccc8799189b4fd1c545faa16f6be3a69a5db9da325af7909a69
+starting Aalto-Sort-G129-Dex3-Joint (log /tmp/aalto_sim.log) ...
+sim ready after 652 s (pid 16210)
+PASS  layout seed 0 (5 objects)  max pos err 0.2 mm, max speed 0.000 m/s, outcomes ['counter']
+PASS  layout seed 1 (4 objects)  max pos err 0.5 mm, max speed 0.000 m/s, outcomes ['counter']
+PASS  layout seed 2 (5 objects)  max pos err 0.5 mm, max speed 0.000 m/s, outcomes ['counter']
+PASS  layout seed 3 (5 objects)  max pos err 0.2 mm, max speed 0.000 m/s, outcomes ['counter']
+PASS  layout seed 4 (5 objects)  max pos err 0.5 mm, max speed 0.000 m/s, outcomes ['counter']
+PASS  drop test sort_fixed  outcomes ['correct', 'correct', 'wrong', 'off'], score 0
+PASS  drop test sort_language  outcomes ['wrong', 'correct', 'correct', 'off'], score 2
+PASS  head RGB-D frame  
+PASS  head depth valid  valid 100 %, median 565 mm
+
+9 PASS / 0 FAIL
+=== eval sort_fixed, 3 trials
+22:26:52.530477 INFO      📷 Camera 'right_wrist_camera'   init ok  client.py:84
+                         (host=127.0.0.1, zmq_port=55557,                       
+                         request_bgr=True)                                      
+[DDSBackend] pacing on the sim clock (tcp://127.0.0.1:55581, sim t 3.29 s)
+policy: {'type': 'metadata', 'name': 'oracle', 'local': True}  sim: {'dr': None, 'ports': {'scene': 55580, 'rgbd': 55560, 'clock': 55581}, 'n_objects': 18, 'sim_t': 3.05, 'step_dt': 0.01, 'rtf': 0.091, 'rtf_mean': 0.091}  -> runs/eval/junction_sort_fixed_nominal_20261113_222651
+trial   0 seed 1000: 3/3 correct  score +3/3  end=done  t=166.02s  clips=0  hz=30.0  rt_hz=52.6  rtf=0.185  gate=ok
+trial   1 seed 1001: 5/5 correct  score +5/5  end=done  t=352.413s  clips=0  hz=30.0  rt_hz=54.47  rtf=0.184  gate=ok
+trial   2 seed 1002: 3/4 correct  score +2/4  end=done  t=400.106s  clips=0  hz=30.0  rt_hz=54.37  rtf=0.183  gate=ok
+22:42:36.712841 INFO      📷 Camera 'head_camera'          closed. client.py:174
+22:42:36.712954 INFO      📷 Camera 'left_wrist_camera'    closed. client.py:174
+22:42:36.782419 INFO      📷 Camera 'right_wrist_camera'   closed. client.py:174
+
+  task / variant             sort_fixed / nominal
+  trials                     3
+  score mean ± std           +3.33 ± 1.25  (83 % of max)
+  objects correct            11/12 (92 %)
+  episodes all correct       2/3
+  outcomes                   {'correct': 11, 'off': 1}
+  end reasons                {'done': 3}
+  safety clips total / max   0 / 0
+  min tick / command rate    30.0 / 30.0 Hz (sim clock)
+  min policy real-time rate  52.6 Hz
+  sim real-time factor       mean 0.184  min 0.183
+  SIM GATE                   PASS
+-> runs/eval/junction_sort_fixed_nominal_20261113_222651/eval.json
+exit 0
+=== eval sort_language, 3 trials
+trial   0 seed 1000: 3/3 correct  score +6/6  end=done  t=154.023s  clips=0  hz=29.99  rt_hz=52.96  rtf=0.183  gate=ok
+22:47:52.823416 WARNING   📷 Camera 'right_wrist_camera'   no      client.py:162
+                         frames for 3s @ 127.0.0.1:55557 — is the               
+                         server running and this port correct?                  
+22:47:53.266610 INFO      📷 Camera 'right_wrist_camera'   frames  client.py:159
+                         resumed.                                               
+trial   1 seed 1001: 2/3 correct  score +4/6  end=done  t=317.751s  clips=0  hz=30.0  rt_hz=55.13  rtf=0.183  gate=ok
+trial   2 seed 1002: 5/5 correct  score +10/10  end=done  t=252.353s  clips=0  hz=30.0  rt_hz=53.03  rtf=0.185  gate=ok
+22:55:16.049682 INFO      📷 Camera 'head_camera'          closed. client.py:174
+22:55:16.049783 INFO      📷 Camera 'left_wrist_camera'    closed. client.py:174
+
+  task / variant             sort_language / nominal
+  trials                     3
+  score mean ± std           +6.67 ± 2.49  (91 % of max)
+  objects correct            10/11 (91 %)
+  episodes all correct       2/3
+  outcomes                   {'correct': 10, 'counter': 1}
+  end reasons                {'done': 3}
+  safety clips total / max   0 / 0
+  min tick / command rate    29.99 / 29.99 Hz (sim clock)
+  min policy real-time rate  52.96 Hz
+  sim real-time factor       mean 0.184  min 0.183
+  SIM GATE                   PASS
+-> runs/eval/junction_sort_language_nominal_20261113_224237/eval.json
+22:55:16.127633 INFO      📷 Camera 'right_wrist_camera'   closed. client.py:174
+exit 0

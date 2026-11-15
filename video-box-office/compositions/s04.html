@@ -1,0 +1,40 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; }
+    #s04-card { left: 96px; top: 150px; width: 960px; height: 720px; }
+    #s04-card img { left: 0; top: 0; width: 960px; height: 720px; mix-blend-mode: normal; }
+    #s04-tagA { left: 112px; top: 166px; } #s04-tagB { left: 112px; top: 166px; }
+    #s04-num { left: 1160px; top: 330px; font-family: var(--mono); font-size: 160px; font-weight: 600; }
+    #s04-lab { left: 1160px; top: 530px; width: 680px; }
+    #s04-src { left: 1160px; top: 220px; width: 680px; }
+  </style>
+  <div id="root" data-composition-id="s04" data-width="1920" data-height="1080">
+    <div class="stage" id="s04-stage">
+      <div class="chapter"><b>The real camera</b> · Aalto venue recording, Drop 3</div>
+      <div class="paper" id="s04-card"><img id="s04-a" src="assets/data/real_before.jpg" alt=""><img id="s04-b" src="assets/data/real_after.jpg" alt=""></div>
+      <div class="abs chip red" id="s04-tagA">stock colour rules</div>
+      <div class="abs chip green" id="s04-tagB">Box Office</div>
+      <div class="abs t-label" id="s04-src">real frames · Hugging Face, Apache-2.0</div>
+      <div class="abs c-red" id="s04-num">132</div>
+      <div class="abs t-body" id="s04-lab">detections on <span class="mono">15</span> real frames</div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const V = window.VID, S = "s04";
+      const tl = gsap.timeline({ paused: true });
+      V.sceneEnvelope(tl, "#s04-stage", S);
+      gsap.set(["#s04-b", "#s04-tagB", "#s04-num", "#s04-lab"], { opacity: 0 });
+      V.enter(tl, ["#s04-card", "#s04-tagA", "#s04-src"], 0.2);
+      V.enter(tl, ["#s04-num", "#s04-lab"], V.t(S, "saw the orange boxes"));
+      tl.to("#s04-b", { opacity: 1, duration: 0.6, ease: "power1.inOut" }, V.t(S, "We fixed"));
+      tl.to("#s04-tagA", { opacity: 0, duration: 0.3 }, V.t(S, "We fixed"));
+      V.enter(tl, "#s04-tagB", V.t(S, "We fixed") + 0.3);
+      const num = document.querySelector("#s04-num");
+      const t0 = V.t(S, "one hundred"), t1 = V.t(S, "seventy-four", 0, "e");
+      V.counter(tl, num, 132, 74, t0, Math.max(0.6, t1 - t0), (x) => String(Math.round(x)));
+      tl.to(num, { color: "#3FBF8F", duration: 0.3 }, t1);
+      window.__timelines[S] = tl;
+    })();
+  </script>
+</template>

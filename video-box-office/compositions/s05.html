@@ -1,0 +1,43 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; }
+    #s05-svg { left: 160px; top: 200px; }
+    #s05-deg { left: 1180px; top: 250px; }
+    #s05-h1 { left: 1180px; top: 420px; font-size: 40px; } #s05-h2 { left: 1180px; top: 420px; font-size: 40px; }
+    #s05-ref { left: 1180px; top: 540px; }
+  </style>
+  <div id="root" data-composition-id="s05" data-width="1920" data-height="1080">
+    <div class="stage" id="s05-stage">
+      <div class="chapter"><b>A tilted camera</b> · self-calibration from the table</div>
+      <svg class="abs" id="s05-svg" width="900" height="560" viewBox="0 0 900 560">
+        <g id="s05-table">
+          <line x1="60" y1="300" x2="840" y2="300" stroke="#F0A63A" stroke-width="10" stroke-linecap="round"/>
+          <rect x="250" y="235" width="65" height="65" fill="#E5604D" rx="4"/><rect x="420" y="235" width="65" height="65" fill="#4C9BE8" rx="4"/>
+          <rect x="590" y="235" width="65" height="65" fill="#E8C547" rx="4"/>
+        </g>
+        <line x1="60" y1="300" x2="840" y2="300" stroke="#46505F" stroke-width="2" stroke-dasharray="10 10"/>
+      </svg>
+      <div class="abs chip red" id="s05-deg"><span class="mono">14°</span> tilt</div>
+      <div class="abs chip red" id="s05-h1">tops read <span class="mono">60–87 mm</span></div>
+      <div class="abs chip green" id="s05-h2">tops read <span class="mono">46–51 mm</span></div>
+      <div class="abs t-label" id="s05-ref">objects are <span class="mono">45 mm</span> tall</div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const V = window.VID, S = "s05";
+      const tl = gsap.timeline({ paused: true });
+      V.sceneEnvelope(tl, "#s05-stage", S);
+      gsap.set("#s05-table", { rotation: -14, svgOrigin: "450 300" });
+      gsap.set(["#s05-deg", "#s05-h1", "#s05-h2", "#s05-ref"], { opacity: 0 });
+      V.enter(tl, "#s05-svg", 0.2);
+      V.enter(tl, "#s05-deg", V.t(S, "tilted"));
+      V.enter(tl, ["#s05-h1", "#s05-ref"], V.t(S, "tilted", 0, "e") + 0.6);
+      tl.to("#s05-table", { rotation: 0, svgOrigin: "450 300", duration: 1.1, ease: "power2.inOut" }, V.t(S, "levels it"));
+      tl.to("#s05-deg", { opacity: 0, duration: 0.3 }, V.t(S, "levels it") + 0.8);
+      tl.to("#s05-h1", { opacity: 0, duration: 0.3 }, V.t(S, "forty-five"));
+      V.enter(tl, "#s05-h2", V.t(S, "forty-five"));
+      window.__timelines[S] = tl;
+    })();
+  </script>
+</template>

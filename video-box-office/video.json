@@ -1,0 +1,6 @@
+{
+  "name": "box-office",
+  "title": "Box Office - a brain for Aalto's G1 humanoid",
+  "poster_at": 9.0,
+  "pad": { "s07": 2.0 }
+}

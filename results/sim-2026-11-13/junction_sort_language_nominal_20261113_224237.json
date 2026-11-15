@@ -1,0 +1,510 @@
+{
+ "summary": {
+  "policy": "junction-sorter:dev",
+  "team": "junction",
+  "task": "sort_language",
+  "variant": "nominal",
+  "dr": null,
+  "trials": 3,
+  "seeds": [
+   1000,
+   1001,
+   1002
+  ],
+  "score_mean": 6.667,
+  "score_std": 2.494,
+  "score_frac": 0.909,
+  "objects": 11,
+  "objects_correct": 10,
+  "object_success": 0.909,
+  "episodes_all_correct": 2,
+  "outcome_counts": {
+   "correct": 10,
+   "counter": 1
+  },
+  "end_reasons": {
+   "done": 3
+  },
+  "safety_clipped_steps_total": 0,
+  "safety_clipped_steps_max": 0,
+  "effective_hz_min": 29.99,
+  "command_hz_min": 29.99,
+  "policy_hz_rt_min": 52.96,
+  "clock": "sim",
+  "rtf_min": 0.183,
+  "rtf_mean": 0.184,
+  "gate": {
+   "passed": true,
+   "failed_trials": [],
+   "max_clips": 0,
+   "min_hz": 27.0
+  }
+ },
+ "trials": [
+  {
+   "episode": 0,
+   "seed": 1000,
+   "instruction": "Place every red object in the center bin. Blue objects belong in the right bin, and yellow ones in the left bin.",
+   "end_reason": "done",
+   "ticks": 847,
+   "hold_ticks": 0,
+   "wait_ticks": 0,
+   "wall_s": 154.023,
+   "clock": "sim",
+   "sim_s": 28.24,
+   "rtf": 0.183,
+   "effective_hz": 29.99,
+   "command_hz": 29.99,
+   "command_hz_wall": 5.5,
+   "policy_calls": 89,
+   "latency_ms_mean": 179.71,
+   "latency_ms_max": 393.35,
+   "ready_frac": 1.0,
+   "policy_hz_rt": 52.96,
+   "safety": {
+    "steps": 847,
+    "clipped_steps": 0,
+    "mode": "ok",
+    "counts": {}
+   },
+   "success": null,
+   "task": "sort_language",
+   "variant": "nominal",
+   "layout": [
+    {
+     "color": "red",
+     "x": 0.376,
+     "y": 0.173,
+     "yaw": 0.081,
+     "shape": "cube"
+    },
+    {
+     "color": "yellow",
+     "x": 0.574,
+     "y": 0.176,
+     "yaw": -0.395,
+     "shape": "triangle"
+    },
+    {
+     "color": "blue",
+     "x": 0.286,
+     "y": 0.14,
+     "yaw": -0.187,
+     "shape": "cube"
+    }
+   ],
+   "mapping": {
+    "red": "center",
+    "blue": "right",
+    "yellow": "left"
+   },
+   "outcomes": [
+    {
+     "name": "obj_red_cube_0",
+     "outcome": "correct"
+    },
+    {
+     "name": "obj_blue_cube_0",
+     "outcome": "correct"
+    },
+    {
+     "name": "obj_yellow_triangle_0",
+     "outcome": "correct"
+    }
+   ],
+   "score": 6,
+   "max_score": 6,
+   "n_objects": 3,
+   "n_correct": 3,
+   "all_correct": true,
+   "settle_s": 0.03,
+   "episode_wall_s": 154.2,
+   "home_err": 0.012,
+   "final_objects": [
+    {
+     "name": "obj_red_cube_0",
+     "pos": [
+      0.43798,
+      -0.00062,
+      0.0355
+     ],
+     "speed": 0.0
+    },
+    {
+     "name": "obj_blue_cube_0",
+     "pos": [
+      0.44127,
+      -0.21443,
+      0.0355
+     ],
+     "speed": 0.0
+    },
+    {
+     "name": "obj_yellow_triangle_0",
+     "pos": [
+      0.44505,
+      0.25533,
+      0.028
+     ],
+     "speed": 0.0
+    }
+   ],
+   "dr_params": null,
+   "mapping_source": "parsed",
+   "oracle_events": [
+    [
+     0.0,
+     "to home (0.6 s)"
+    ],
+    [
+     1.24,
+     "execute red    right arm -> center bin  grasp=(+0.31,-0.07,+0.03) drop=(+0.45,+0.00,+0.13)  IK ok max_err=3.1mm max_tilt=1deg  9.6s  safety_clips=0"
+    ],
+    [
+     11.34,
+     "execute yellow left  arm -> left bin  grasp=(+0.32,+0.12,+0.03) drop=(+0.45,+0.21,+0.13)  IK ok max_err=0.0mm max_tilt=0deg  8.5s  safety_clips=0"
+    ],
+    [
+     20.34,
+     "execute blue   right arm -> right bin  grasp=(+0.28,-0.16,+0.03) drop=(+0.45,-0.21,+0.13)  IK ok max_err=0.0mm max_tilt=0deg  7.3s  safety_clips=0"
+    ],
+    [
+     28.17,
+     "nothing left to sort (0 detections)"
+    ]
+   ],
+   "gate_ok": true,
+   "gate_why": []
+  },
+  {
+   "episode": 1,
+   "seed": 1001,
+   "instruction": "The left bin is for blue objects, the right bin for yellow, the center bin for red.",
+   "end_reason": "done",
+   "ticks": 1749,
+   "hold_ticks": 0,
+   "wait_ticks": 0,
+   "wall_s": 317.751,
+   "clock": "sim",
+   "sim_s": 58.3,
+   "rtf": 0.183,
+   "effective_hz": 30.0,
+   "command_hz": 30.0,
+   "command_hz_wall": 5.5,
+   "policy_calls": 184,
+   "latency_ms_mean": 172.43,
+   "latency_ms_max": 529.33,
+   "ready_frac": 1.0,
+   "policy_hz_rt": 55.13,
+   "safety": {
+    "steps": 1749,
+    "clipped_steps": 0,
+    "mode": "ok",
+    "counts": {}
+   },
+   "success": null,
+   "task": "sort_language",
+   "variant": "nominal",
+   "layout": [
+    {
+     "color": "yellow",
+     "x": 0.348,
+     "y": 0.164,
+     "yaw": -0.631,
+     "shape": "triangle"
+    },
+    {
+     "color": "red",
+     "x": 0.54,
+     "y": 0.138,
+     "yaw": -0.015,
+     "shape": "cylinder"
+    },
+    {
+     "color": "blue",
+     "x": 0.428,
+     "y": 0.156,
+     "yaw": 0.476,
+     "shape": "triangle"
+    }
+   ],
+   "mapping": {
+    "blue": "left",
+    "yellow": "right",
+    "red": "center"
+   },
+   "outcomes": [
+    {
+     "name": "obj_red_cylinder_0",
+     "outcome": "correct"
+    },
+    {
+     "name": "obj_yellow_triangle_0",
+     "outcome": "correct"
+    },
+    {
+     "name": "obj_blue_triangle_0",
+     "outcome": "counter"
+    }
+   ],
+   "score": 4,
+   "max_score": 6,
+   "n_objects": 3,
+   "n_correct": 2,
+   "all_correct": false,
+   "settle_s": 0.04,
+   "episode_wall_s": 318.0,
+   "home_err": 0.012,
+   "final_objects": [
+    {
+     "name": "obj_red_cylinder_0",
+     "pos": [
+      0.42618,
+      0.00682,
+      0.0355
+     ],
+     "speed": 0.0
+    },
+    {
+     "name": "obj_yellow_triangle_0",
+     "pos": [
+      0.43661,
+      -0.21394,
+      0.028
+     ],
+     "speed": 0.0
+    },
+    {
+     "name": "obj_blue_triangle_0",
+     "pos": [
+      0.2987,
+      -0.01443,
+      0.03226
+     ],
+     "speed": 0.0
+    }
+   ],
+   "dr_params": null,
+   "mapping_source": "parsed",
+   "oracle_events": [
+    [
+     0.0,
+     "to home (0.6 s)"
+    ],
+    [
+     1.04,
+     "execute red    left  arm -> center bin  grasp=(+0.28,+0.09,+0.03) drop=(+0.45,+0.00,+0.13)  IK ok max_err=0.0mm max_tilt=0deg  9.7s  safety_clips=0"
+    ],
+    [
+     11.24,
+     "execute yellow right arm -> right bin  grasp=(+0.31,-0.10,+0.03) drop=(+0.45,-0.21,+0.13)  IK ok max_err=0.0mm max_tilt=0deg  8.4s  safety_clips=0"
+    ],
+    [
+     20.1,
+     "execute blue   left  arm -> left bin  grasp=(+0.30,-0.02,+0.03) drop=(+0.45,+0.21,+0.13)  IK ok max_err=3.9mm max_tilt=24deg  9.1s  safety_clips=0"
+    ],
+    [
+     29.67,
+     "execute yellow right arm -> right bin  grasp=(+0.30,-0.11,+0.03) drop=(+0.45,-0.21,+0.13)  IK ok max_err=0.0mm max_tilt=0deg  8.2s  safety_clips=0"
+    ],
+    [
+     38.34,
+     "execute blue   left  arm -> left bin  grasp=(+0.30,-0.02,+0.03) drop=(+0.45,+0.21,+0.13)  IK ok max_err=4.3mm max_tilt=27deg  8.8s  safety_clips=0"
+    ],
+    [
+     47.67,
+     "execute yellow right arm -> right bin  grasp=(+0.27,-0.11,+0.03) drop=(+0.45,-0.21,+0.13)  IK ok max_err=4.7mm max_tilt=9deg  10.1s  safety_clips=0"
+    ],
+    [
+     58.24,
+     "nothing left to sort (1 detections)"
+    ]
+   ],
+   "gate_ok": true,
+   "gate_why": []
+  },
+  {
+   "episode": 2,
+   "seed": 1002,
+   "instruction": "Use the left bin for red, the center bin for blue and the right bin for yellow objects.",
+   "end_reason": "done",
+   "ticks": 1404,
+   "hold_ticks": 0,
+   "wait_ticks": 0,
+   "wall_s": 252.353,
+   "clock": "sim",
+   "sim_s": 46.8,
+   "rtf": 0.185,
+   "effective_hz": 30.0,
+   "command_hz": 30.0,
+   "command_hz_wall": 5.56,
+   "policy_calls": 147,
+   "latency_ms_mean": 180.1,
+   "latency_ms_max": 365.52,
+   "ready_frac": 1.0,
+   "policy_hz_rt": 53.03,
+   "safety": {
+    "steps": 1404,
+    "clipped_steps": 0,
+    "mode": "ok",
+    "counts": {}
+   },
+   "success": null,
+   "task": "sort_language",
+   "variant": "nominal",
+   "layout": [
+    {
+     "color": "blue",
+     "x": 0.526,
+     "y": 0.166,
+     "yaw": -0.216,
+     "shape": "triangle"
+    },
+    {
+     "color": "yellow",
+     "x": 0.373,
+     "y": 0.187,
+     "yaw": 0.379,
+     "shape": "cylinder"
+    },
+    {
+     "color": "red",
+     "x": 0.614,
+     "y": 0.152,
+     "yaw": 0.193,
+     "shape": "cube"
+    },
+    {
+     "color": "red",
+     "x": 0.286,
+     "y": 0.141,
+     "yaw": -0.395,
+     "shape": "cylinder"
+    },
+    {
+     "color": "yellow",
+     "x": 0.445,
+     "y": 0.121,
+     "yaw": 0.752,
+     "shape": "cylinder"
+    }
+   ],
+   "mapping": {
+    "red": "left",
+    "blue": "center",
+    "yellow": "right"
+   },
+   "outcomes": [
+    {
+     "name": "obj_red_cube_0",
+     "outcome": "correct"
+    },
+    {
+     "name": "obj_red_cylinder_0",
+     "outcome": "correct"
+    },
+    {
+     "name": "obj_yellow_cylinder_0",
+     "outcome": "correct"
+    },
+    {
+     "name": "obj_yellow_cylinder_1",
+     "outcome": "correct"
+    },
+    {
+     "name": "obj_blue_triangle_0",
+     "outcome": "correct"
+    }
+   ],
+   "score": 10,
+   "max_score": 10,
+   "n_objects": 5,
+   "n_correct": 5,
+   "all_correct": true,
+   "settle_s": 0.09,
+   "episode_wall_s": 252.6,
+   "home_err": 0.012,
+   "final_objects": [
+    {
+     "name": "obj_red_cube_0",
+     "pos": [
+      0.47222,
+      0.19186,
+      0.0355
+     ],
+     "speed": 0.0
+    },
+    {
+     "name": "obj_red_cylinder_0",
+     "pos": [
+      0.49649,
+      0.26996,
+      0.03462
+     ],
+     "speed": 0.0
+    },
+    {
+     "name": "obj_yellow_cylinder_0",
+     "pos": [
+      0.444,
+      -0.20084,
+      0.0355
+     ],
+     "speed": 0.0
+    },
+    {
+     "name": "obj_yellow_cylinder_1",
+     "pos": [
+      0.49973,
+      -0.18507,
+      0.03382
+     ],
+     "speed": 0.0
+    },
+    {
+     "name": "obj_blue_triangle_0",
+     "pos": [
+      0.45208,
+      0.03047,
+      0.028
+     ],
+     "speed": 0.0
+    }
+   ],
+   "dr_params": null,
+   "mapping_source": "parsed",
+   "oracle_events": [
+    [
+     0.0,
+     "to home (0.6 s)"
+    ],
+    [
+     1.04,
+     "execute blue   left  arm -> center bin  grasp=(+0.31,+0.08,+0.03) drop=(+0.45,+0.00,+0.13)  IK ok max_err=0.0mm max_tilt=0deg  9.0s  safety_clips=0"
+    ],
+    [
+     10.57,
+     "execute red    left  arm -> left bin  grasp=(+0.29,+0.16,+0.03) drop=(+0.45,+0.21,+0.13)  IK ok max_err=0.0mm max_tilt=0deg  7.2s  safety_clips=0"
+    ],
+    [
+     18.24,
+     "execute yellow right arm -> right bin  grasp=(+0.33,-0.08,+0.03) drop=(+0.45,-0.21,+0.13)  IK ok max_err=0.0mm max_tilt=0deg  8.2s  safety_clips=0"
+    ],
+    [
+     26.94,
+     "execute yellow right arm -> right bin  grasp=(+0.26,-0.00,+0.03) drop=(+0.48,-0.18,+0.13)  IK ok max_err=4.4mm max_tilt=1deg  9.8s  safety_clips=0"
+    ],
+    [
+     37.27,
+     "execute red    left  arm -> left bin  grasp=(+0.28,-0.16,+0.03) drop=(+0.48,+0.24,+0.13)  IK ok max_err=4.0mm max_tilt=1deg  9.0s  safety_clips=0"
+    ],
+    [
+     46.74,
+     "nothing left to sort (0 detections)"
+    ]
+   ],
+   "gate_ok": true,
+   "gate_why": []
+  }
+ ]
+}

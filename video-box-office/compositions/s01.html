@@ -1,0 +1,43 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; }
+    #s01-bg { left: 0; top: 0; width: 1920px; height: 1080px; background: #2B43A6; }
+    #s01-line { left: 0; top: 150px; width: 1920px; display: block; text-align: center !important; color: #FFFFFF; }
+    #s01-row { left: 0; top: 330px; width: 1920px; height: 400px; }
+    #s01-row .pic { position: absolute; top: 0; }
+    #s01-word { left: 0; top: 760px; width: 1920px; text-align: center; font-size: 110px; font-weight: 600; color: #FFFFFF; letter-spacing: -0.03em; }
+    #s01-tags { left: 0; top: 280px; width: 1920px; height: 60px; font-family: var(--mono); font-size: 32px; color: #B8C5F6; }
+    #s01-tags div { position: absolute; width: 400px; text-align: center; }
+  </style>
+  <div id="root" data-composition-id="s01" data-width="1920" data-height="1080">
+    <div class="stage" id="s01-stage">
+      <div class="abs" id="s01-bg"></div>
+      <div class="abs t-title" id="s01-line"></div>
+      <div class="abs" id="s01-tags"><div id="s01-t1" style="left:330px">BOX</div><div id="s01-t2" style="left:760px">OFF</div><div id="s01-t3" style="left:1190px">ICE</div></div>
+      <div class="abs" id="s01-row">
+        <div class="pic" id="s01-box" style="left:315px"></div>
+        <div class="pic" id="s01-off" style="left:820px; top:40px"></div>
+        <div class="pic" id="s01-ice" style="left:1220px; top:30px"></div>
+      </div>
+      <div class="abs" id="s01-word">Box Office</div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const V = window.VID, S = "s01";
+      const tl = gsap.timeline({ paused: true });
+      V.sceneEnvelope(tl, "#s01-stage", S);
+      document.querySelector("#s01-box").innerHTML = window.REBUS.box;
+      document.querySelector("#s01-off").innerHTML = window.REBUS.off;
+      document.querySelector("#s01-ice").innerHTML = window.REBUS.ice;
+      V.typeOn(tl, document.querySelector("#s01-line"), "Backflips: easy. Blocks: hard.", 0.25, 1.4);
+      gsap.set(["#s01-box", "#s01-off", "#s01-ice", "#s01-t1", "#s01-t2", "#s01-t3", "#s01-word"], { opacity: 0 });
+      V.fadeOut(tl, "#s01-line", V.t(S, "Box") - 0.4, 0.3);
+      V.enter(tl, ["#s01-box", "#s01-t1"], V.t(S, "Box"), { y: 30 });
+      V.enter(tl, ["#s01-off", "#s01-t2"], V.t(S, "Off"), { y: 30 });
+      V.enter(tl, ["#s01-ice", "#s01-t3"], V.t(S, "Ice"), { y: 30 });
+      V.enter(tl, "#s01-word", V.t(S, "Box Office"), { y: 24 });
+      window.__timelines[S] = tl;
+    })();
+  </script>
+</template>

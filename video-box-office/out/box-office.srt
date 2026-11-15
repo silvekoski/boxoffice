@@ -1,0 +1,156 @@
+1
+00:00:00,120 --> 00:00:02,160
+This humanoid can do a backflip.
+
+2
+00:00:02,160 --> 00:00:04,160
+It cannot put a block in a box.
+
+3
+00:00:04,160 --> 00:00:06,280
+We gave it a brain, and a name.
+
+4
+00:00:06,280 --> 00:00:06,960
+Box.
+
+5
+00:00:06,960 --> 00:00:07,240
+Off.
+
+6
+00:00:07,240 --> 00:00:08,000
+Ice.
+
+7
+00:00:08,000 --> 00:00:09,050
+Box Office.
+
+8
+00:00:09,353 --> 00:00:12,313
+Three to five objects lie on the counter.
+
+9
+00:00:12,313 --> 00:00:15,953
+Cubes, cylinders and prisms,
+in red, yellow and blue.
+
+10
+00:00:15,953 --> 00:00:17,993
+Three boxes wait behind them.
+
+11
+00:00:17,993 --> 00:00:19,873
+The robot has two minutes.
+
+12
+00:00:19,873 --> 00:00:21,753
+A right box earns points.
+
+13
+00:00:21,753 --> 00:00:23,673
+A wrong box costs one.
+
+14
+00:00:23,673 --> 00:00:25,963
+So when it is unsure, it skips.
+
+15
+00:00:26,187 --> 00:00:29,527
+A person says where things
+go, in their own words.
+
+16
+00:00:29,527 --> 00:00:31,307
+The blue ones in between.
+
+17
+00:00:31,307 --> 00:00:33,367
+The first box from the left.
+
+18
+00:00:33,367 --> 00:00:35,387
+Our parser has no templates.
+
+19
+00:00:35,387 --> 00:00:38,517
+It turns each sentence
+into one box per object.
+
+20
+00:00:38,787 --> 00:00:42,087
+Aalto published real
+recordings from the venue.
+
+21
+00:00:42,087 --> 00:00:45,767
+On those frames, the stock
+colour rules saw the orange boxes
+
+22
+00:00:45,767 --> 00:00:50,067
+and the robot's hands as objects,
+and missed the red ones.
+
+23
+00:00:50,067 --> 00:00:51,727
+We fixed the colours.
+
+24
+00:00:51,727 --> 00:00:53,547
+Detections fell from one hundred thirty-two
+
+25
+00:00:53,547 --> 00:00:56,917
+to seventy-four, about five per frame.
+
+26
+00:00:57,153 --> 00:00:59,673
+The camera calibration was off too.
+
+27
+00:00:59,673 --> 00:01:02,693
+The table looked tilted by fourteen degrees.
+
+28
+00:01:02,693 --> 00:01:06,413
+Now the robot measures the
+table itself, and levels it.
+
+29
+00:01:06,413 --> 00:01:09,903
+Objects read about forty-five
+millimetres tall again.
+
+30
+00:01:10,087 --> 00:01:14,187
+We scored it in Aalto's
+simulator, on randomised scenes.
+
+31
+00:01:14,187 --> 00:01:17,807
+Fixed sorting: ten of twenty
+objects, up from eight.
+
+32
+00:01:17,807 --> 00:01:20,287
+By instruction: ten of eighteen.
+
+33
+00:01:20,287 --> 00:01:22,547
+Not one object went into a wrong box,
+
+34
+00:01:22,547 --> 00:01:25,547
+and the safety filter
+never clipped a command.
+
+35
+00:01:25,547 --> 00:01:28,267
+On the real recordings,
+the robot starts moving
+
+36
+00:01:28,267 --> 00:01:31,177
+after about one second, not up to fifty-two.
+
